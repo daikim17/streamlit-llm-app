@@ -1,12 +1,12 @@
 import streamlit as st
 from dotenv import load_dotenv
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
 
 load_dotenv()
 
 # LLMの初期化
-llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.5)
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.5)
 
 # 専門家の選択肢
 expert_types = {
